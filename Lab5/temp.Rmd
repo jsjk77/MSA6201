@@ -1,0 +1,133 @@
+---
+title: "Temp"
+author: "Jonathan Kim"
+date: "2023-03-08"
+output: html_document
+---
+
+```{r}
+a <- read.table("./aripo.hwe",header=TRUE,sep="\t")
+g <- read.table("./guanapo.hwe",header=TRUE,sep="\t")
+t <- read.table("./tacarigua.hwe",header=TRUE,sep="\t")
+a3 <- a[(a$P_HWE<0.05) & (a$P_HET_EXCESS<0.05),]
+aexcess <- paste(a3$CHR,a3$POS,sep="_")
+g3 <- g[(g$P_HWE<0.05) & (g$P_HET_EXCESS<0.05),]
+gexcess <- paste(g3$CHR,g3$POS,sep="_")
+t3 <- t[(t$P_HWE<0.05) & (t$P_HET_EXCESS<0.05),]
+texcess <- paste(t3$CHR,t3$POS,sep="_")
+write.table(aexcess,"aexcess", row.names = FALSE, col.names = FALSE)
+write.table(gexcess,"gexcess", row.names = FALSE, col.names = FALSE)
+write.table(texcess,"texcess", row.names = FALSE, col.names = FALSE)
+```
+
+```{r}
+aripo<-readLines("./aripo.recode.vcf")
+aripo_data<-read.table("./aripo.recode.vcf", stringsAsFactors = FALSE)
+
+# filter for the columns names
+aripo<-aripo[-(grep("#CHROM",aripo)+1):-(length(aripo))]
+aripo_names<-unlist(strsplit(aripo[length(aripo)],"\t"))
+names(aripo_data)<-aripo_names
+
+guanapo<-readLines("./guanapo.recode.vcf")
+guanapo_data<-read.table("./guanapo.recode.vcf", stringsAsFactors = FALSE)
+
+# filter for the columns names
+guanapo<-guanapo[-(grep("#CHROM",guanapo)+1):-(length(guanapo))]
+guanapo_names<-unlist(strsplit(guanapo[length(guanapo)],"\t"))
+names(guanapo_data)<-guanapo_names
+
+tacarigua<-readLines("./tacarigua.recode.vcf")
+tacarigua_data<-read.table("./tacarigua.recode.vcf", stringsAsFactors = FALSE)
+
+# filter for the columns names
+tacarigua<-tacarigua[-(grep("#CHROM",tacarigua)+1):-(length(tacarigua))]
+tacarigua_names<-unlist(strsplit(tacarigua[length(tacarigua)],"\t"))
+names(tacarigua_data)<-tacarigua_names
+```
+
+```{r}
+all <- intersect(aripo_data$ID, guanapo_data$ID)
+all2 <- intersect(all,tacarigua_data$ID)
+length(all2)
+```
+
+```{r}
+write.table(all2,"all2",col.names=FALSE,row.names=FALSE)
+```
+
+```{r}
+eigenval<-read.table("./plink.eigenval",header=FALSE)
+eigenval[1,1]/sum(eigenval)
+```
+
+```{r}
+eigenval[2,1]/sum(eigenval)
+```
+
+```{r}
+sum = 0
+count = 0
+y <- vector()
+for (i in eigenval[,1]) {
+  #print(i/sum(eigenval))
+  if (sum < 0.9) {
+    sum = sum + i/sum(eigenval)
+    count = count + 1
+  }
+  y <- c(y,i/sum(eigenval))
+}
+print(count)
+print(sum)
+```
+
+```{r}
+plot(seq(1:101),y,xlab= "PC", ylab = "Variance Explained", pch = 10, col = "red", cex =1)
+lines(seq(1:101), y, col="blue",lwd = 2)
+```
+
+```{r}
+my.plink = read.table("plink.eigenvec")
+my.pcs = my.plink[,3:4]
+colnames(my.pcs) = c("PC1","PC2")
+my.pcs$River = substr(my.plink$V1, 1, 2)
+my.pcs$Predator = substr(my.plink$V1, 3, 4)
+#head(my.pcs)
+plot(my.pcs$PC1, my.pcs$PC2, xlab="PC 1", ylab="PC 2", pch=20)
+#install.packages("ggplot2")
+library(ggplot2)
+myplot = ggplot(data = my.pcs, aes(x=PC1, y=PC2, col=River)) + geom_point() + scale_color_manual(values=c("#56B4E9", "#D55E00", "#009E73"))
+myplot + theme_bw()
+myplot = ggplot(data = my.pcs, aes(x=PC1, y=PC2, col=River, shape=Predator)) + geom_point() + scale_color_manual(values=c("#56B4E9", "#D55E00", "#009E73"))
+myplot + theme_bw()
+```
+
+```{r}
+my.pcs2 = my.plink[,3:4]
+colnames(my.pcs2) = c("PC1","PC2")
+my.pcs2$River = my.plink$V1
+my.pcs2$Predator = substr(my.plink$V1, 3, 4)
+hp = my.pcs2$River[my.pcs2$Predator == "HP"]
+lp = my.pcs2$River[my.pcs2$Predator == "LP"]
+write.table(lp,"lp", col.names = FALSE, row.names = FALSE)
+write.table(hp,"hp", col.names = FALSE, row.names = FALSE)
+```
+
+```{r}
+q8 <- read.table("./q8.windowed.weir.fst", sep="\t", header = TRUE)
+mean(q8$WEIGHTED_FST)
+hist(q8$WEIGHTED_FST)
+sum(q8$WEIGHTED_FST > q8$MEAN_FST)
+sum(q8$WEIGHTED_FST < q8$MEAN_FST)
+sum(q8$WEIGHTED_FST == q8$MEAN_FST)
+```
+
+```{r}
+my.fst = read.table("./q8.windowed.weir.fst", header=TRUE, stringsAsFactors = FALSE)
+plot(my.fst$BIN_START, my.fst$WEIGHTED_FST, xlab="Position", ylab="Fst", pch=20)
+```
+
+```{r}
+smooth.fst = smooth(my.fst$WEIGHTED_FST)
+plot(my.fst$BIN_START, smooth.fst, xlab="Position", ylab="Fst", pch=20)
+```

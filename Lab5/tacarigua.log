@@ -1,0 +1,14 @@
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf tacarigua.vcf
+	--out tacarigua
+	--recode
+	--exclude texcess
+
+After filtering, kept 26 out of 26 Individuals
+Outputting VCF file...
+After filtering, kept 26874 out of a possible 26874 Sites
+Run Time = 0.00 seconds

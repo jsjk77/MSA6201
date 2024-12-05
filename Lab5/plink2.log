@@ -1,0 +1,26 @@
+PLINK v2.00a3.3LM AVX2 Intel (3 Jun 2022)
+Options in effect:
+  --pca 101
+  --vcf part2a.vcf
+
+Hostname: gal-i1.uncc.edu
+Working directory: /users/jkim185
+Start time: Mon Mar 13 12:12:43 2023
+
+Random number seed: 1678723963
+128353 MiB RAM detected; reserving 64176 MiB for main workspace.
+Using up to 16 threads (change this with --threads).
+--vcf: 17172 variants scanned.
+--vcf: plink2-temporary.pgen + plink2-temporary.pvar.zst +
+plink2-temporary.psam written.
+101 samples (0 females, 0 males, 101 ambiguous; 101 founders) loaded from
+plink2-temporary.psam.
+17172 variants loaded from plink2-temporary.pvar.zst.
+Note: No phenotype data present.
+Calculating allele frequencies... done.
+Constructing GRM: done.
+Extracting eigenvalues and eigenvectors... done.
+--pca: Eigenvectors written to plink2.eigenvec , and eigenvalues written to
+plink2.eigenval .
+
+End time: Mon Mar 13 12:12:44 2023

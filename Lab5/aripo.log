@@ -1,0 +1,14 @@
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf aripo.vcf
+	--out aripo
+	--recode
+	--exclude aexcess
+
+After filtering, kept 38 out of 38 Individuals
+Outputting VCF file...
+After filtering, kept 83777 out of a possible 83777 Sites
+Run Time = 1.00 seconds
