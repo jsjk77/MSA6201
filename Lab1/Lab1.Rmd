@@ -1,0 +1,26 @@
+---
+title: "Lab1"
+author: "Jonathan Kim"
+date: "2023-01-23"
+output: html_document
+---
+
+#Comparing table a and table b for shared instances.
+```{r}
+a <- read.table("./lab1pt1gene_result.txt",sep='\t',header=T)
+b <- read.table("./lab1pt2gene_result.txt",sep="\t",header=T)
+
+humans <- vector()
+for (i in 1:nrow(b))
+{
+    #print(b[i,"GeneID"])
+  humans<-c(humans,b[i,"Symbol"])
+}
+#humans #Works, gives 35 IDs
+bird <- vector()
+for (j in 1:nrow(a)) {
+  bird<-c(bird,a[j,"Symbol"])
+}
+#bird
+intersect(humans, bird)
+```

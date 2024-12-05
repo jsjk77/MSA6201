@@ -1,0 +1,18 @@
+tax_id	Org_name	GeneID	CurrentID	Status	Symbol	Aliases	description	other_designations	map_location	chromosome	genomic_nucleotide_accession.version	start_position_on_the_genomic_accession	end_position_on_the_genomic_accession	orientation	exon_count	OMIM	
+9244	Calypte anna	115598295	0	live	MAP9		microtubule associated protein 9	microtubule-associated protein 9		4A	NC_044248.1	33011346	33028244	plus	11		
+9244	Calypte anna	103536155	0	live	SOX4		SRY-box transcription factor 4	transcription factor SOX-4|SRY-box 4		2	NC_044245.1	56811296	56815120	plus	1		
+9244	Calypte anna	103536154	0	live	E2F3		E2F transcription factor 3	transcription factor E2F3		2	NC_044245.1	56241555	56288136	plus	8		
+9244	Calypte anna	103536153	0	live	MBOAT1	N300_08047	membrane bound O-acyltransferase domain containing 1	lysophospholipid acyltransferase 1|Lysophospholipid acyltransferase 1		2	NC_044245.1	56161317	56216928	minus	14		
+9244	Calypte anna	103536148	0	live	CDKAL1	N300_08049	CDK5 regulatory subunit associated protein 1 like 1	threonylcarbamoyladenosine tRNA methylthiotransferase|Threonylcarbamoyladenosine tRNA methylthiotransferase		2	NC_044245.1	56294347	56671835	plus	18		
+9244	Calypte anna	103530669	0	live	LURAP1L	N300_15522	leucine rich adaptor protein 1 like	leucine rich adaptor protein 1-like		Z	NC_044274.1	43452507	43474407	minus	2		
+9244	Calypte anna	103530642	0	live	TYRP1	N300_15523	tyrosinase related protein 1	5,6-dihydroxyindole-2-carboxylic acid oxidase		Z	NC_044274.1	43496550	43507229	minus	8		
+9244	Calypte anna	103530641	0	live	MPDZ		multiple PDZ domain crumbs cell polarity complex component	multiple PDZ domain protein		Z	NC_044274.1	43286907	43374643	plus	46		
+9244	Calypte anna	103530639	0	live	NFIB	N300_15519	nuclear factor I B	nuclear factor 1 B-type|Nuclear factor 1 B-type		Z	NC_044274.1	42869582	43034926	plus	13		
+9244	Calypte anna	103528517	0	live	RBM46	N300_14970	RNA binding motif protein 46	probable RNA-binding protein 46|putative RNA-binding protein 46		4A	NC_044248.1	33202313	33214390	minus	5		
+9244	Calypte anna	103528515	0	live	PLRG1	N300_14965	pleiotropic regulator 1	pleiotropic regulator 1		4A	NC_044248.1	33336771	33357802	plus	18		
+9244	Calypte anna	103528462	0	live	NPY2R	N300_14971	neuropeptide Y receptor Y2	neuropeptide Y receptor type 2|Neuropeptide Y receptor type 2		4A	NC_044248.1	33094718	33095875	minus	1		
+9244	Calypte anna	103528461	0	live	LRAT	N300_14969	lecithin retinol acyltransferase	lecithin retinol acyltransferase|lecithin retinol acyltransferase (phosphatidylcholine--retinol O-acyltransferase)		4A	NC_044248.1	33227865	33231019	minus	2		
+9244	Calypte anna	103528460	0	live	FGG		fibrinogen gamma chain	fibrinogen gamma chain		4A	NC_044248.1	33305284	33310944	plus	10		
+9244	Calypte anna	103528459	0	live	FGA	N300_14967	fibrinogen alpha chain	fibrinogen alpha chain		4A	NC_044248.1	33316674	33323548	plus	6		
+9244	Calypte anna	103528458	0	live	FGB	N300_14966, BFIB	fibrinogen beta chain	fibrinogen beta chain|beta-fibrinogen		4A	NC_044248.1	33325194	33332779	minus	8		
+9244	Calypte anna	103528516	0	live	LOC103528516	N300_14968	uncharacterized LOC103528516	uncharacterized protein LOC103528516		4A	NC_044248.1	33235307	33296584	minus	20		

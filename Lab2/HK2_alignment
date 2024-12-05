@@ -1,0 +1,116 @@
+########################################
+# Program: needle
+# Rundate: Mon 30 Jan 2023 12:52:59
+# Commandline: needle
+#    -auto
+#    -asequence dog2.fasta
+#    -sformat1 fasta
+#    -sprotein1
+#    -bsequence human2.fasta
+#    -sformat2 fasta
+#    -sprotein2
+#    -datafile EBLOSUM62
+#    -gapopen 10
+#    -gapextend 0.5
+#    -outfile HK2_alignment
+# Align_format: srspair
+# Report_file: HK2_alignment
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: XP_038547540.1
+# 2: NP_000180.2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 917
+# Identity:     877/917 (95.6%)
+# Similarity:   896/917 (97.7%)
+# Gaps:           0/917 ( 0.0%)
+# Score: 4567.0
+# 
+#
+#=======================================
+
+XP_038547540.      1 MIASHLLAYFFTELNHDQVQKVDQYLYHMRLSDENLLEISKRFRKEMEKG     50
+                     ||||||||||||||||||||||||||||||||||.|||||||||||||||
+NP_000180.2        1 MIASHLLAYFFTELNHDQVQKVDQYLYHMRLSDETLLEISKRFRKEMEKG     50
+
+XP_038547540.     51 LGATTHPTASVKMLPTFVRSTPDGTEHGEFLALDLGGTNFRVLRVRVTDN    100
+                     |||||||||:|||||||||||||||||||||||||||||||||.|:||||
+NP_000180.2       51 LGATTHPTAAVKMLPTFVRSTPDGTEHGEFLALDLGGTNFRVLWVKVTDN    100
+
+XP_038547540.    101 GLQKVEMENQIYAIPEDLMRGSGTQLFDHIAECLANFMDKLQIKDKKLPL    150
+                     |||||||||||||||||:||||||||||||||||||||||||||||||||
+NP_000180.2      101 GLQKVEMENQIYAIPEDIMRGSGTQLFDHIAECLANFMDKLQIKDKKLPL    150
+
+XP_038547540.    151 GFTFSFPCVQTKLDESFLVSWTKGFKSSGVEGKDVVTLIRKAIQRRGDFD    200
+                     ||||||||.|||||||||||||||||||||||:|||.|||||||||||||
+NP_000180.2      151 GFTFSFPCHQTKLDESFLVSWTKGFKSSGVEGRDVVALIRKAIQRRGDFD    200
+
+XP_038547540.    201 IDIVAVVNDTVGTMMTCGYDDQNCEIGLIVGTGSNACYMEEMRHIDMVEG    250
+                     |||||||||||||||||||||.||||||||||||||||||||||||||||
+NP_000180.2      201 IDIVAVVNDTVGTMMTCGYDDHNCEIGLIVGTGSNACYMEEMRHIDMVEG    250
+
+XP_038547540.    251 DEGRMCINMEWGAFGDDGILDDFRTEFDQEIDMGSLNPGKQLFEKMISGM    300
+                     ||||||||||||||||||.|:|.|||||||||||||||||||||||||||
+NP_000180.2      251 DEGRMCINMEWGAFGDDGSLNDIRTEFDQEIDMGSLNPGKQLFEKMISGM    300
+
+XP_038547540.    301 YMGELVRLILVKMAKEELLFGGKLSPGLLATGQFETKDVSDIEGEKDGIR    350
+                     ||||||||||||||||||||||||||.||.||:|||||:|||||||||||
+NP_000180.2      301 YMGELVRLILVKMAKEELLFGGKLSPELLNTGRFETKDISDIEGEKDGIR    350
+
+XP_038547540.    351 KAREVLVRLGIDPTQEDCVATHRVCQIVSTRSASLCAATLAAVLRRIKEN    400
+                     ||||||:|||:||||||||||||:||||||||||||||||||||:|||||
+NP_000180.2      351 KAREVLMRLGLDPTQEDCVATHRICQIVSTRSASLCAATLAAVLQRIKEN    400
+
+XP_038547540.    401 KGEERLRSTIGVDGSVYKKHPHFAKRLHKTVRRLVPDCDVRFLRSEDGSG    450
+                     ||||||||||||||||||||||||||||||||||||.|||||||||||||
+NP_000180.2      401 KGEERLRSTIGVDGSVYKKHPHFAKRLHKTVRRLVPGCDVRFLRSEDGSG    450
+
+XP_038547540.    451 KGAAMVTAVAYRLADQHRARQNTLESLKLSREQLLEVKRRMNVEMGRGLS    500
+                     |||||||||||||||||||||.|||.|:||.:|||||||||.|||.||||
+NP_000180.2      451 KGAAMVTAVAYRLADQHRARQKTLEHLQLSHDQLLEVKRRMKVEMERGLS    500
+
+XP_038547540.    501 KETHAIAPVKMLPTYVCATPDGTEKGDFLALDLGGTNFRVLLVRVKNGKR    550
+                     |||||.|||||||||||||||||||||||||||||||||||||||:|||.
+NP_000180.2      501 KETHASAPVKMLPTYVCATPDGTEKGDFLALDLGGTNFRVLLVRVRNGKW    550
+
+XP_038547540.    551 RGVEMHNKIYSIPQEVMHGTGDELFDHIVQCIADFLEYMGMKGVSLPLGF    600
+                     .|||||||||:|||||||||||||||||||||||||||||||||||||||
+NP_000180.2      551 GGVEMHNKIYAIPQEVMHGTGDELFDHIVQCIADFLEYMGMKGVSLPLGF    600
+
+XP_038547540.    601 TFSFPCQQNSLDESILLKWTKGFKASGCEGEDVVTLLKEAIHRREEFDLD    650
+                     ||||||||||||||||||||||||||||||||||||||||||||||||||
+NP_000180.2      601 TFSFPCQQNSLDESILLKWTKGFKASGCEGEDVVTLLKEAIHRREEFDLD    650
+
+XP_038547540.    651 VVAVVNDTVGTMMTCGYEDPHCEVGLIVGTGSNACYMEEMRNVELVEGEE    700
+                     ||||||||||||||||:|||||||||||||||||||||||||||||||||
+NP_000180.2      651 VVAVVNDTVGTMMTCGFEDPHCEVGLIVGTGSNACYMEEMRNVELVEGEE    700
+
+XP_038547540.    701 GRMCVNMEWGAFGDNGCLDDIRTEFDVAVDELSLNPGKQRFEKMISGMYL    750
+                     ||||||||||||||||||||.|||||||||||||||||||||||||||||
+NP_000180.2      701 GRMCVNMEWGAFGDNGCLDDFRTEFDVAVDELSLNPGKQRFEKMISGMYL    750
+
+XP_038547540.    751 GEIVRNILIDFTKRGLLFRGRISERLKTRGIFETKFLSQIESDCLALLQV    800
+                     ||||||||||||||||||||||||||||||||||||||||||||||||||
+NP_000180.2      751 GEIVRNILIDFTKRGLLFRGRISERLKTRGIFETKFLSQIESDCLALLQV    800
+
+XP_038547540.    801 RAILHHLGLESTCDDSIIVKEVCTVVARRAAQLCGAGMAAVVDKIRENRG    850
+                     ||||.||||||||||||||||||||||||||||||||||||||:||||||
+NP_000180.2      801 RAILQHLGLESTCDDSIIVKEVCTVVARRAAQLCGAGMAAVVDRIRENRG    850
+
+XP_038547540.    851 LDTLKVTVGVDGTLYKLHPHFAKIMHETVKDLAPKCDVSFLESEDGSGKG    900
+                     ||.||||||||||||||||||||:|||||||||||||||||:||||||||
+NP_000180.2      851 LDALKVTVGVDGTLYKLHPHFAKVMHETVKDLAPKCDVSFLQSEDGSGKG    900
+
+XP_038547540.    901 AALITAVACRIREAGQR    917
+                     |||||||||||||||||
+NP_000180.2      901 AALITAVACRIREAGQR    917
+
+
+#---------------------------------------
+#---------------------------------------
