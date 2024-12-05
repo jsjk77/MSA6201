@@ -1,0 +1,64 @@
+---
+title: "Lab6"
+author: "Jonathan Kim"
+date: "2023-03-27"
+output: html_document
+---
+
+```{r}
+#install.packages("phangorn")
+library(phangorn)
+### Read in the alignment file
+my.aln = read.phyDat(file="./clustalo-I20230327-162956-0219-3584994-p1m.clustal", format="clustal")
+
+### Perform a model test on all possible models
+modelTest <- modelTest(my.aln)
+modelTest
+```
+```{r}
+### Calculate distance under your best fit model
+my.dist = dist.dna(as.DNAbin(my.aln), model="F84", gamma=TRUE)
+
+### Create a neighbor-joining tree 
+my.nj = nj(my.dist)
+
+### Get a basic plot in R
+plot(my.nj)
+
+### Write tree to an output file
+write.tree(my.nj, file="bees-NJtree.nwk")
+
+```
+
+```{r}
+eigenval<-read.table("./plink.eigenval",header=FALSE)
+my.plink = read.table("plink.eigenvec")
+
+### Extract just PC1 and PC2 into their own table
+my.pcs = my.plink[,3:4]
+colnames(my.pcs) = c("PC1","PC2")
+
+my.pcs$Color = substr(my.plink$V1, 1, 2)
+
+my.pcs$Location = substr(my.plink$V1,nchar(my.plink$V1)-2, nchar(my.plink$V1)-1)
+
+### Create a basic PCA plot (no color coding)
+plot(my.pcs$PC1, my.pcs$PC2, xlab="PC 1", ylab="PC 2", pch=20)
+### Install and load ggplot2
+#install.packages("ggplot2")
+library(ggplot2)
+
+### Create a plot color-coded by river (using custom colors that should be color-blind safe)
+myplot = ggplot(data = my.pcs, aes(x=PC1, y=PC2, col=Color)) + geom_point() + scale_color_manual(values=c("#56B4E9", "#D55E00", "#009E73", "#000000"))
+myplot + theme_bw()
+
+# Define the shapes you want to use
+my_shapes <- c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+
+# Create the plot with color and shape mapping
+myplot <- ggplot(data = my.pcs, aes(x = PC1, y = PC2, col = Color, shape = Location)) + 
+  geom_point() + 
+  scale_color_manual(values = c("#FFC300", "#1F77B4", "#FF5733", "#2CA02C", "#9B59B6", "#E74C3C", "#3498DB", "#F1C40F", "#7F8C8D")) +
+  scale_shape_manual(values = my_shapes)
+myplot + theme_bw()
+```

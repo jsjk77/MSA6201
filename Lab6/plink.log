@@ -1,0 +1,26 @@
+PLINK v1.90b6.26 64-bit (2 Apr 2022)
+Options in effect:
+  --allow-extra-chr
+  --pca 57
+  --vcf q1.vcf
+
+Hostname: gal-i1.uncc.edu
+Working directory: /users/jkim185
+Start time: Mon Mar 27 12:41:22 2023
+
+Random number seed: 1679935282
+128353 MB RAM detected; reserving 64176 MB for main workspace.
+--vcf: plink-temporary.bed + plink-temporary.bim + plink-temporary.fam written.
+67 variants loaded from .bim file.
+57 people (0 males, 0 females, 57 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to plink.nosex .
+Using up to 15 threads (change this with --threads).
+Before main variant filters, 57 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.99005.
+67 variants and 57 people pass filters and QC.
+Note: No phenotypes present.
+Relationship matrix calculation complete.
+--pca: Results saved to plink.eigenval and plink.eigenvec .
+
+End time: Mon Mar 27 12:41:22 2023
